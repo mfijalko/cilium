@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// +build !privileged_tests
+
 package fswatcher
 
 import (
@@ -50,8 +52,8 @@ func (s *FsWatcherTestSuite) TestWatcher(c *C) {
 		nestedFile,
 		indirectSymlink,
 	})
-	defer w.Close()
 	c.Assert(err, IsNil)
+	defer w.Close()
 
 	eventName := make(chan string)
 	go func() {

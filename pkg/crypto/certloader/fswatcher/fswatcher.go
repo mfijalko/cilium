@@ -17,7 +17,6 @@ package fswatcher
 import (
 	"errors"
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"os"
 	"path/filepath"
 
@@ -26,6 +25,7 @@ import (
 	"github.com/cilium/cilium/pkg/logging/logfields"
 
 	"github.com/fsnotify/fsnotify"
+	"github.com/sirupsen/logrus"
 )
 
 var log = logging.DefaultLogger.WithField(logfields.LogSubsys, "fswatcher")
