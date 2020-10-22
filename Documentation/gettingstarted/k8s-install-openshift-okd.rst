@@ -31,8 +31,10 @@ OpenShift Requirements
      doesn't simply pickup ``az login`` credentials. It's recommended to
      setup a dedicated service principal and use it
    - with the GCP provider ``openshift-install`` will only work with a service
-     account key, which has to be set using ``GOOGLE_APPLICATION_CREDENTIALS``
-     environment variable (e.g. ``GOOGLE_APPLICATION_CREDENTIALS=service-account.json``)
+     account key, which has to be set using ``GOOGLE_CREDENTIALS``
+     environment variable (e.g. ``GOOGLE_CREDENTIALS=service-account.json``).
+     Follow `Openshift Installer documentation <https://github.com/openshift/installer/blob/master/docs/user/gcp/iam.md>`_
+     to assign required roles to your service account.
 
 Create an OpenShift OKD Cluster
 ===============================
